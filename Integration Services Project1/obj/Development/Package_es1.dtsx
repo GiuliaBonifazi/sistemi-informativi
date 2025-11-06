@@ -1,0 +1,2231 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/6/2025 9:29:26 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAB22-04-08"
+  DTS:CreatorName="STUDENTI\giulia.bonifazi"
+  DTS:DTSID="{9347D341-3879-478C-B10C-92AD84FA5613}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{4F043FBB-D369-4E8B-8098-955984E13048}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Canada]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{65083A51-AD02-4637-9DBA-8D922BC56A65}"
+      DTS:ObjectName="Flat File Connection Manager Canada">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\giulia.bonifazi\source\repos\Integration Services Project1\Integration Services Project1\dati2025\Es1_vendite_CAN.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id_vendita"
+              DTS:DTSID="{99BAB9AA-B21D-464B-8AE8-CC05D7CCFAEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prodotto_id"
+              DTS:DTSID="{D34CE8E8-721D-4C19-82D8-7BA37DA40017}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="quantita"
+              DTS:DTSID="{E0A0192C-E413-44B5-8A38-4CA94D70D129}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="data"
+              DTS:DTSID="{3E1C0A78-6578-40E4-BC74-B56E294BA1D0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Prod]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BBDEFCE4-E832-4990-80AA-0CE6A76F75BD}"
+      DTS:ObjectName="Flat File Connection Manager Prod">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\giulia.bonifazi\source\repos\Integration Services Project1\Integration Services Project1\dati2025\Es1_prodotti.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prodotto_id"
+              DTS:DTSID="{A93D40D5-AC7D-417E-BE77-48E0B268C98F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nome_prodotto"
+              DTS:DTSID="{D79115C1-6142-425E-A3AA-6D99E95B6195}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categoria"
+              DTS:DTSID="{05E74FD9-FE22-479A-B816-2196D84FE0B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prezzo"
+              DTS:DTSID="{65CD59FA-E169-45EF-B03B-E7C51C740F44}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Usa]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{ee6b23b1-ee36-46be-a19e-6929470eaeba}"
+      DTS:ObjectName="Flat File Connection Manager Usa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\giulia.bonifazi\source\repos\Integration Services Project1\Integration Services Project1\dati2025\Es1_vendite_USA.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id_vendita"
+              DTS:DTSID="{0C2A1145-CAD6-401A-8B93-D8B6A8D887AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prodotto_id"
+              DTS:DTSID="{F717D519-B052-474F-8707-41BD2FBF85B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="quantita"
+              DTS:DTSID="{018F1047-F82B-4762-885B-8640700A471C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="data"
+              DTS:DTSID="{067C7332-931C-48B6-A7E8-19CBC1D8D07A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{7465D769-9C58-4FDD-8349-921B324101E8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A0A12BE0-6786-4D02-B5A9-3F8E9495650F}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [SISSLab].[STUDENTI\giulia.bonifazi].[es1_prod]&#xA;&#xA;TRUNCATE TABLE [SISSLab].[STUDENTI\giulia.bonifazi].[es1_vendite_ok]&#xA;&#xA;TRUNCATE TABLE [SISSLab].[STUDENTI\giulia.bonifazi].[es1_vendite_nomatch]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Prodotti"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3C29438B-03A1-42D4-8D13-F5075D5C809D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Prodotti"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Prodotti\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1040"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Prodotti\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Prod]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Prod]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[prodotto_id]"
+                      length="5"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[prodotto_id]"
+                      name="prodotto_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[nome_prodotto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nome_prodotto]"
+                      length="20"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[nome_prodotto]"
+                      name="nome_prodotto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[categoria]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[categoria]"
+                      length="20"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[categoria]"
+                      name="categoria"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[prezzo]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[prezzo]"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[prezzo]"
+                      name="prezzo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="prodotto_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nome_prodotto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="nome_prodotto" />
+                    <externalMetadataColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[categoria]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="categoria" />
+                    <externalMetadataColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[prezzo]"
+                      dataType="r4"
+                      name="prezzo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Prodotti\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[STUDENTI\giulia.bonifazi].[es1_prod]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Prodotti\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{A0A12BE0-6786-4D02-B5A9-3F8E9495650F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ISI-SQLNEW.SISSLab]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prodotto_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="prodotto_id"
+                      externalMetadataColumnId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prodotto_id]"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[prodotto_id]" />
+                    <inputColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nome_prodotto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="nome_prodotto"
+                      externalMetadataColumnId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nome_prodotto]"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[nome_prodotto]" />
+                    <inputColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[categoria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="categoria"
+                      externalMetadataColumnId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[categoria]"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[categoria]" />
+                    <inputColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prezzo]"
+                      cachedDataType="r4"
+                      cachedName="prezzo"
+                      externalMetadataColumnId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prezzo]"
+                      lineageId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output].Columns[prezzo]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="prodotto_id" />
+                    <externalMetadataColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nome_prodotto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="nome_prodotto" />
+                    <externalMetadataColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[categoria]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="categoria" />
+                    <externalMetadataColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prezzo]"
+                      dataType="r4"
+                      name="prezzo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Prodotti\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Prodotti\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Prodotti\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Prodotti\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Prodotti.Paths[Flat File Source Output]"
+              endId="Package\Load Prodotti\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load Prodotti\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Merge"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3B5C118F-811E-45CA-BDBE-B9D012F7416C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Merge"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Merge\Derived Column Can"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column Can"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Merge\Derived Column Can.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge\Derived Column Can.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Merge\Derived Column Can.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Derived Column Can.Outputs[Derived Column Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Merge\Derived Column Can.Outputs[Derived Column Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Can"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Can"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Merge\Derived Column Can.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Merge\Derived Column Can.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Derived Column Can.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Derived Column Can.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge\Derived Column Can.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Derived Column Can.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge\Derived Column Usa"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column Usa"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Merge\Derived Column Usa.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge\Derived Column Usa.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Merge\Derived Column Usa.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Derived Column Usa.Outputs[Derived Column Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Merge\Derived Column Usa.Outputs[Derived Column Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Usa"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Usa"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Merge\Derived Column Usa.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Merge\Derived Column Usa.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Derived Column Usa.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Derived Column Usa.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge\Derived Column Usa.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Derived Column Usa.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge\Flat File Source Canada"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1040"
+              name="Flat File Source Canada"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge\Flat File Source Canada.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Canada]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Canada]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[id_vendita]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].ExternalColumns[id_vendita]"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[id_vendita]"
+                      name="id_vendita"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].ExternalColumns[prodotto_id]"
+                      length="5"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[prodotto_id]"
+                      name="prodotto_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[quantita]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].ExternalColumns[quantita]"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[quantita]"
+                      name="quantita"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[data]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].ExternalColumns[data]"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[data]"
+                      name="data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].ExternalColumns[id_vendita]"
+                      dataType="i8"
+                      name="id_vendita" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].ExternalColumns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="prodotto_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].ExternalColumns[quantita]"
+                      dataType="i8"
+                      name="quantita" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].ExternalColumns[data]"
+                      dataType="date"
+                      name="data" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge\Flat File Source Usa"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1040"
+              name="Flat File Source Usa"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge\Flat File Source Usa.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Usa]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Usa]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[id_vendita]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].ExternalColumns[id_vendita]"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[id_vendita]"
+                      name="id_vendita"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].ExternalColumns[prodotto_id]"
+                      length="5"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[prodotto_id]"
+                      name="prodotto_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[quantita]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].ExternalColumns[quantita]"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[quantita]"
+                      name="quantita"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[data]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].ExternalColumns[data]"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[data]"
+                      name="data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].ExternalColumns[id_vendita]"
+                      dataType="i8"
+                      name="id_vendita" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].ExternalColumns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="prodotto_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].ExternalColumns[quantita]"
+                      dataType="i8"
+                      name="quantita" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].ExternalColumns[data]"
+                      dataType="date"
+                      name="data" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [STUDENTI\giulia.bonifazi].[es1_prod]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [STUDENTI\giulia.bonifazi].[es1_prod]) [refTable]
+where [refTable].[prodotto_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="prodotto_id" dataType="DT_STR" length="5" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nome_prodotto" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="categoria" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="prezzo" dataType="DT_R4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[prodotto_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="{A0A12BE0-6786-4D02-B5A9-3F8E9495650F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ISI-SQLNEW.SISSLab]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Merge\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge\Lookup.Inputs[Lookup Input].Columns[prodotto_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="prodotto_id"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[prodotto_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">prodotto_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Merge\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Merge\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Merge\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Merge\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Merge\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge\OLE DB Destination nomatch"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination nomatch"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[es1_vendite_nomatch]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge\OLE DB Destination nomatch.Connections[OleDbConnection]"
+                  connectionManagerID="{A0A12BE0-6786-4D02-B5A9-3F8E9495650F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ISI-SQLNEW.SISSLab]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].Columns[id_vendita]"
+                      cachedDataType="i8"
+                      cachedName="id_vendita"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[id_vendita]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[id_vendita]" />
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].Columns[prodotto_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="prodotto_id"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[prodotto_id]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[prodotto_id]" />
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].Columns[quantita]"
+                      cachedDataType="i8"
+                      cachedName="quantita"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[quantita]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[quantita]" />
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].Columns[data]"
+                      cachedDataType="date"
+                      cachedName="data"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[data]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[data]" />
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[Country]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[id_vendita]"
+                      dataType="i8"
+                      name="id_vendita" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="prodotto_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[quantita]"
+                      dataType="i8"
+                      name="quantita" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[data]"
+                      dataType="dbTimeStamp"
+                      name="data" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="3"
+                      name="Country" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge\OLE DB Destination nomatch.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge\OLE DB Destination nomatch.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge\OLE DB Destination nomatch.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge\OLE DB Destination nomatch.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge\OLE DB Destination ok"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination ok"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[es1_vendite_ok]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Merge\OLE DB Destination ok.Connections[OleDbConnection]"
+                  connectionManagerID="{A0A12BE0-6786-4D02-B5A9-3F8E9495650F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ISI-SQLNEW.SISSLab]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].Columns[id_vendita]"
+                      cachedDataType="i8"
+                      cachedName="id_vendita"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[id_vendita]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[id_vendita]" />
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].Columns[prodotto_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="prodotto_id"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[prodotto_id]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[prodotto_id]" />
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].Columns[quantita]"
+                      cachedDataType="i8"
+                      cachedName="quantita"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[quantita]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[quantita]" />
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].Columns[data]"
+                      cachedDataType="date"
+                      cachedName="data"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[data]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[data]" />
+                    <inputColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[Country]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[id_vendita]"
+                      dataType="i8"
+                      name="id_vendita" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="prodotto_id" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[quantita]"
+                      dataType="i8"
+                      name="quantita" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[data]"
+                      dataType="dbTimeStamp"
+                      name="data" />
+                    <externalMetadataColumn
+                      refId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="3"
+                      name="Country" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge\OLE DB Destination ok.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\OLE DB Destination ok.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Merge\OLE DB Destination ok.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Merge\OLE DB Destination ok.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Merge\OLE DB Destination ok.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Merge\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Merge\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 1].Columns[id_vendita]"
+                      cachedDataType="i8"
+                      cachedName="id_vendita"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[id_vendita]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[id_vendita]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 1].Columns[prodotto_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="prodotto_id"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[prodotto_id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[prodotto_id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 1].Columns[quantita]"
+                      cachedDataType="i8"
+                      cachedName="quantita"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[quantita]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[quantita]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 1].Columns[data]"
+                      cachedDataType="date"
+                      cachedName="data"
+                      lineageId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output].Columns[data]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[data]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 1].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Country"
+                      lineageId="Package\Merge\Derived Column Can.Outputs[Derived Column Output].Columns[Country]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[Country]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Merge\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 2].Columns[id_vendita]"
+                      cachedDataType="i8"
+                      cachedName="id_vendita"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[id_vendita]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[id_vendita]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 2].Columns[prodotto_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="prodotto_id"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[prodotto_id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[prodotto_id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 2].Columns[quantita]"
+                      cachedDataType="i8"
+                      cachedName="quantita"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[quantita]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[quantita]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 2].Columns[data]"
+                      cachedDataType="date"
+                      cachedName="data"
+                      lineageId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output].Columns[data]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[data]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Merge\Union All.Inputs[Union All Input 2].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Country"
+                      lineageId="Package\Merge\Derived Column Usa.Outputs[Derived Column Output].Columns[Country]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Merge\Union All.Outputs[Union All Output 1].Columns[Country]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Merge\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Merge\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[id_vendita]"
+                      dataType="i8"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[id_vendita]"
+                      name="id_vendita" />
+                    <outputColumn
+                      refId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[prodotto_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[prodotto_id]"
+                      name="prodotto_id" />
+                    <outputColumn
+                      refId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[quantita]"
+                      dataType="i8"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[quantita]"
+                      name="quantita" />
+                    <outputColumn
+                      refId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[data]"
+                      dataType="date"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[data]"
+                      name="data" />
+                    <outputColumn
+                      refId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[Country]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Merge\Union All.Outputs[Union All Output 1].Columns[Country]"
+                      name="Country" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Merge.Paths[Derived Column Output]"
+              endId="Package\Merge\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Merge\Derived Column Can.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Merge.Paths[Derived Column Output1]"
+              endId="Package\Merge\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Merge\Derived Column Usa.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Merge.Paths[Flat File Source Output]"
+              endId="Package\Merge\Derived Column Can.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Merge\Flat File Source Canada.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Merge.Paths[Flat File Source Output1]"
+              endId="Package\Merge\Derived Column Usa.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Merge\Flat File Source Usa.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Merge.Paths[Lookup Match Output]"
+              endId="Package\Merge\OLE DB Destination ok.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Merge\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Merge.Paths[Lookup No Match Output]"
+              endId="Package\Merge\OLE DB Destination nomatch.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Merge\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Merge.Paths[Union All Output 1]"
+              endId="Package\Merge\Lookup.Inputs[Lookup Input]"
+              name="Union All Output 1"
+              startId="Package\Merge\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{BF26A5B9-16E4-41F4-943D-2BE128994BA8}"
+      DTS:From="Package\Load Prodotti"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Merge" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{0FE57926-A613-4BDE-8B00-A8FAE855C8C6}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load Prodotti" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="346,14" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Load Prodotti"
+          TopLeft="357,115" />
+        <NodeLayout
+          Size="110,42"
+          Id="Package\Merge"
+          TopLeft="631.5,224.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="429,157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="257.5,67.5"
+              Start="0,0"
+              End="257.5,60">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.75"
+                    Point2="0,33.75"
+                    Point3="4,33.75" />
+                  <mssgle:LineSegment
+                    End="253.5,33.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="253.5,33.75"
+                    Point2="257.5,33.75"
+                    Point3="257.5,37.75" />
+                  <mssgle:LineSegment
+                    End="257.5,60" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="430,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Prodotti">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load Prodotti\Flat File Source"
+          TopLeft="496.5,93.5" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Load Prodotti\OLE DB Destination"
+          TopLeft="479,238" />
+        <EdgeLayout
+          Id="Package\Load Prodotti.Paths[Flat File Source Output]"
+          TopLeft="571,135.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,102.5"
+              Start="0,0"
+              End="0,95">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,95" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Prodotti\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Merge">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Merge\Derived Column Can"
+          TopLeft="369,290" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Merge\OLE DB Destination ok"
+          TopLeft="289,633" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Merge\Flat File Source Usa"
+          TopLeft="672,149" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Merge\Derived Column Usa"
+          TopLeft="679,293" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Merge\OLE DB Destination nomatch"
+          TopLeft="769,630" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Merge\Union All"
+          TopLeft="551,422" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Merge\Flat File Source Canada"
+          TopLeft="348,144" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Merge\Lookup"
+          TopLeft="561,522" />
+        <EdgeLayout
+          Id="Package\Merge.Paths[Union All Output 1]"
+          TopLeft="615.5,464">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,17.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge.Paths[Lookup No Match Output]"
+          TopLeft="636.333333333333,564">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="243.666666666667,66"
+              Start="0,0"
+              End="243.666666666667,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.9433962264151" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.9433962264151"
+                    Point2="0,26.9433962264151"
+                    Point3="4,26.9433962264151" />
+                  <mssgle:LineSegment
+                    End="239.666666666667,26.9433962264151" />
+                  <mssgle:CubicBezierSegment
+                    Point1="239.666666666667,26.9433962264151"
+                    Point2="243.666666666667,26.9433962264151"
+                    Point3="243.666666666667,30.9433962264151" />
+                  <mssgle:LineSegment
+                    End="243.666666666667,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="57.1582942708333,31.9433962264151,129.350078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge.Paths[Lookup Match Output]"
+          TopLeft="600.666666666667,564">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-215.666666666667,69"
+              Start="0,0"
+              End="-215.666666666667,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.1680960548885" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.1680960548885"
+                    Point2="0,28.1680960548885"
+                    Point3="-4,28.1680960548885" />
+                  <mssgle:LineSegment
+                    End="-211.666666666667,28.1680960548885" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-211.666666666667,28.1680960548885"
+                    Point2="-215.666666666667,28.1680960548885"
+                    Point3="-215.666666666667,32.1680960548885" />
+                  <mssgle:LineSegment
+                    End="-215.666666666667,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-164.893372395833,33.1680960548885,114.120078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge.Paths[Flat File Source Output1]"
+          TopLeft="761,191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8,102"
+              Start="0,0"
+              End="8,94.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47"
+                    Point2="0,51"
+                    Point3="4,51" />
+                  <mssgle:LineSegment
+                    End="4,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4,51"
+                    Point2="8,51"
+                    Point3="8,55" />
+                  <mssgle:LineSegment
+                    End="8,94.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-4,56,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge.Paths[Flat File Source Output]"
+          TopLeft="446.5,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13,104"
+              Start="0,0"
+              End="13,96.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48"
+                    Point2="0,52"
+                    Point3="4,52" />
+                  <mssgle:LineSegment
+                    End="9,52" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9,52"
+                    Point2="13,52"
+                    Point3="13,56" />
+                  <mssgle:LineSegment
+                    End="13,96.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-1.5,57,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge.Paths[Derived Column Output1]"
+          TopLeft="769,335">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137.333333333333,87"
+              Start="0,0"
+              End="-137.333333333333,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.529695024077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.529695024077"
+                    Point2="0,51.529695024077"
+                    Point3="-4,51.529695024077" />
+                  <mssgle:LineSegment
+                    End="-133.333333333333,51.529695024077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-133.333333333333,51.529695024077"
+                    Point2="-137.333333333333,51.529695024077"
+                    Point3="-137.333333333333,55.529695024077" />
+                  <mssgle:LineSegment
+                    End="-137.333333333333,79.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Merge.Paths[Derived Column Output]"
+          TopLeft="459.5,332">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="133.833333333333,90"
+              Start="0,0"
+              End="133.833333333333,82.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.30658105939" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.30658105939"
+                    Point2="0,53.30658105939"
+                    Point3="4,53.30658105939" />
+                  <mssgle:LineSegment
+                    End="129.833333333333,53.30658105939" />
+                  <mssgle:CubicBezierSegment
+                    Point1="129.833333333333,53.30658105939"
+                    Point2="133.833333333333,53.30658105939"
+                    Point3="133.833333333333,57.30658105939" />
+                  <mssgle:LineSegment
+                    End="133.833333333333,82.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Merge\OLE DB Destination ok">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Merge\OLE DB Destination nomatch">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Merge\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[STUDENTI\giulia.bonifazi].[es1_prod]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
