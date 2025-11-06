@@ -1,0 +1,2338 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/6/2025 11:28:33 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAB22-04-08"
+  DTS:CreatorName="STUDENTI\giulia.bonifazi"
+  DTS:DTSID="{2785FC7B-B58A-4A4D-8CDC-548BE5EBBF71}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{085C1DEE-0D0D-433D-A231-D8193CD1E5F9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Call Center]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0834D332-2E65-42CD-9E11-2050B392117E}"
+      DTS:ObjectName="Flat File Connection Manager Call Center">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\giulia.bonifazi\source\repos\Integration Services Project1\Integration Services Project1\dati2025\Es3_CustomersCallCenter.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{ECFE67C9-444C-4555-906A-FEE974448F75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{36DC8236-220D-4BD3-8E47-2A5B8770E4D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MiddleInitial"
+              DTS:DTSID="{059693A5-C88A-4D6B-8538-D1DE066406A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{B1E62DBF-83AF-4A98-BC4C-6AEB709745D3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager MKT]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1B8DBEF9-66F6-41D5-BFAE-69F5FA0C1721}"
+      DTS:ObjectName="Flat File Connection Manager MKT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\giulia.bonifazi\source\repos\Integration Services Project1\Integration Services Project1\dati2025\Es3_CustomersMKT.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{FEEB732D-73F1-4AAE-99A1-B70E4A5DA015}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{B260DFBC-9A3A-4038-BE17-5C7CDF2737BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MiddleInitial"
+              DTS:DTSID="{2259F084-311D-411B-ACAD-AADB6B01CDCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{4C1AC8CF-0D2A-4488-8BC2-9E7E542D30E4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager SLS]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{06284F10-5EB5-4F30-B419-0167A0FD6E76}"
+      DTS:ObjectName="Flat File Connection Manager SLS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\giulia.bonifazi\source\repos\Integration Services Project1\Integration Services Project1\dati2025\Es3_CustomersSLS.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{1EA5F072-0E0C-4D9A-9A2C-1DABBC0A41EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{B3308EF0-ECD7-46DB-8D24-2ED3C8045E62}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MiddleInitial"
+              DTS:DTSID="{02D72CE4-BC11-47A5-8F16-DCF0F84219C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{B8CABE88-5E84-45DA-86F7-2789A967579A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DB0B7899-E816-41AD-B709-863FCB70968F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[_key_in]"
+                      cachedDataType="i4"
+                      cachedName="_key_in"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[_key_out]"
+                      cachedDataType="i4"
+                      cachedName="_key_out"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[unique]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="unique"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]} == #{Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">_key_in == _key_out</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[duplicate]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="duplicate"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]} != #{Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">_key_in != _key_out</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Source CC"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1040"
+              name="Flat File Source CC"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Source CC.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Call Center]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Call Center]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[ID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].ExternalColumns[FirstName]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].ExternalColumns[MiddleInitial]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[MiddleInitial]"
+                      name="MiddleInitial"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].ExternalColumns[LastName]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      dataType="i8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].ExternalColumns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="LastName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Source MKT"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1040"
+              name="Flat File Source MKT"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Source MKT.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager MKT]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager MKT]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[ID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].ExternalColumns[FirstName]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].ExternalColumns[MiddleInitial]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[MiddleInitial]"
+                      name="MiddleInitial"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].ExternalColumns[LastName]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      dataType="i8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].ExternalColumns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="LastName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Source SLS"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1040"
+              name="Flat File Source SLS"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Source SLS.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager SLS]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager SLS]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[ID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].ExternalColumns[FirstName]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].ExternalColumns[MiddleInitial]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[MiddleInitial]"
+                      name="MiddleInitial"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].ExternalColumns[LastName]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      dataType="i8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].ExternalColumns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="LastName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Fuzzy Grouping"
+              componentClassID="Microsoft.FuzzyGrouping"
+              contactInfo="Fuzzy Grouping;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Identifies potential duplicate rows and helps standardize the data by selecting canonical replacements. For example, reduce the occurrences of typos in a 'company name' column by referencing an approved list of company names."
+              name="Fuzzy Grouping"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Single"
+                  description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                  name="MinSimilarity">0.8</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the white-space and punctuation characters used to separate strings into multiple words."
+                  name="Delimiters"> 	
+,.;:-"'&amp;/\@!?()&lt;&gt;[]{}|#*^%</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the maximum amount of memory (MB) that transform should use.  A value of 0 will enable dynamic memory usage based upon requirements and available system memory."
+                  expressionType="Notify"
+                  name="MaxMemoryUsage" />
+                <property
+                  dataType="System.Boolean"
+                  description="If true, each input record will be directly compared against EVERY other input record.  This may produce slightly better results, but will be extremely slow unless the number of input records is very small.  This option is primarily intended for debugging purposes and should be used with care."
+                  name="Exhaustive">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Fuzzy Grouping.Connections[OleDbConnection]"
+                  connectionManagerID="{A0A12BE0-6786-4D02-B5A9-3F8E9495650F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ISI-SQLNEW.SISSLab]"
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Fuzzy Grouping.Inputs[Fuzzy Grouping Input]"
+                  name="Fuzzy Grouping Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstName"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">true</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">196611</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[MiddleInitial]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MiddleInitial"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">true</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">196611</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Inputs[Fuzzy Grouping Input].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="LastName"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to use the column to determine if two records are similar."
+                          name="ToBeCleaned">true</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies whether rows must be exact matches or fuzzy matches to be considered duplicates."
+                          name="ExactFuzzy"
+                          typeConverter="tcJoinType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the hint that causes similar rows that contain differing leading or trailing numeric values be less likely to be considered duplicates."
+                          name="LeadingTrailingNumeralsSignificant"
+                          typeConverter="tcNumeralsSignificant">0</property>
+                        <property
+                          dataType="System.Single"
+                          description="Specifies the minimum similarity threshold, expressed as a value between 0 and 1."
+                          name="MinSimilarity">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies how string data in a column is compared."
+                          name="FuzzyComparisonFlags"
+                          typeConverter="tcComparisonFlags">196611</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output]"
+                  name="Fuzzy Grouping Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]"
+                      name="_key_in">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\-1:invalid}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]"
+                      name="_key_out">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">2</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\-1:invalid}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]"
+                      dataType="r4"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]"
+                      name="_score">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">3</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\-1:invalid}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstName]"
+                      name="FirstName">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[MiddleInitial]"
+                      name="MiddleInitial">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastName]"
+                      name="LastName">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstName_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstName_clean]"
+                      name="FirstName_clean">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[MiddleInitial_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[MiddleInitial_clean]"
+                      name="MiddleInitial_clean">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastName_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastName_clean]"
+                      name="LastName_clean">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_FirstName]"
+                      dataType="r4"
+                      description="Column-level similarity score for fuzzy join on column &quot;FirstName&quot;."
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_FirstName]"
+                      name="_Similarity_FirstName">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_MiddleInitial]"
+                      dataType="r4"
+                      description="Column-level similarity score for fuzzy join on column &quot;MiddleInitial&quot;."
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_MiddleInitial]"
+                      name="_Similarity_MiddleInitial">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_LastName]"
+                      dataType="r4"
+                      description="Column-level similarity score for fuzzy join on column &quot;LastName&quot;."
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_LastName]"
+                      name="_Similarity_LastName">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column type. The valid values are Canonical, ColumnSimilarity, KeyIn, KeyOut, PassThru, Similarity and Undefined."
+                          name="ColumnType"
+                          typeConverter="tcColumnType">4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column. The value must be a positive integer."
+                          name="InputId">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination dump"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination dump"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[es3_dump]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination dump.Connections[OleDbConnection]"
+                  connectionManagerID="{A0A12BE0-6786-4D02-B5A9-3F8E9495650F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ISI-SQLNEW.SISSLab]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[_key_in]"
+                      cachedDataType="i4"
+                      cachedName="_key_in"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_key_in]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[_key_out]"
+                      cachedDataType="i4"
+                      cachedName="_key_out"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_key_out]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[_score]"
+                      cachedDataType="r4"
+                      cachedName="_score"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_score]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[MiddleInitial]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MiddleInitial"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[MiddleInitial]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[FirstName_clean]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstName_clean"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[FirstName_clean]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstName_clean]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[MiddleInitial_clean]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MiddleInitial_clean"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial_clean]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[MiddleInitial_clean]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[LastName_clean]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="LastName_clean"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[LastName_clean]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastName_clean]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[_Similarity_FirstName]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_FirstName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_FirstName]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_FirstName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[_Similarity_MiddleInitial]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_MiddleInitial"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_MiddleInitial]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_MiddleInitial]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].Columns[_Similarity_LastName]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_LastName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_LastName]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_LastName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_key_in]"
+                      dataType="i4"
+                      name="_key_in" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_key_out]"
+                      dataType="i4"
+                      name="_key_out" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_score]"
+                      dataType="r4"
+                      name="_score" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[FirstName_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstName_clean" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MiddleInitial_clean" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[LastName_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="LastName_clean" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_FirstName]"
+                      dataType="r4"
+                      name="_Similarity_FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_MiddleInitial]"
+                      dataType="r4"
+                      name="_Similarity_MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_LastName]"
+                      dataType="r4"
+                      name="_Similarity_LastName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination dump.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination dump.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination dump.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination dump.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination unique"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination unique"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[es3_unique]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination unique.Connections[OleDbConnection]"
+                  connectionManagerID="{A0A12BE0-6786-4D02-B5A9-3F8E9495650F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ISI-SQLNEW.SISSLab]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[_key_in]"
+                      cachedDataType="i4"
+                      cachedName="_key_in"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_key_in]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_in]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[_key_out]"
+                      cachedDataType="i4"
+                      cachedName="_key_out"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_key_out]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_key_out]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[_score]"
+                      cachedDataType="r4"
+                      cachedName="_score"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_score]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_score]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[MiddleInitial]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MiddleInitial"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[MiddleInitial]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[FirstName_clean]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstName_clean"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[FirstName_clean]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[FirstName_clean]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[MiddleInitial_clean]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MiddleInitial_clean"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial_clean]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[MiddleInitial_clean]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[LastName_clean]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="LastName_clean"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[LastName_clean]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[LastName_clean]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[_Similarity_FirstName]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_FirstName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_FirstName]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_FirstName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[_Similarity_MiddleInitial]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_MiddleInitial"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_MiddleInitial]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_MiddleInitial]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].Columns[_Similarity_LastName]"
+                      cachedDataType="r4"
+                      cachedName="_Similarity_LastName"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_LastName]"
+                      lineageId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output].Columns[_Similarity_LastName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_key_in]"
+                      dataType="i4"
+                      name="_key_in" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_key_out]"
+                      dataType="i4"
+                      name="_key_out" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_score]"
+                      dataType="r4"
+                      name="_score" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[FirstName_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstName_clean" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="MiddleInitial_clean" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[LastName_clean]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="LastName_clean" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_FirstName]"
+                      dataType="r4"
+                      name="_Similarity_FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_MiddleInitial]"
+                      dataType="r4"
+                      name="_Similarity_MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input].ExternalColumns[_Similarity_LastName]"
+                      dataType="r4"
+                      name="_Similarity_LastName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination unique.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination unique.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination unique.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination unique.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[ID]"
+                      cachedDataType="i8"
+                      cachedName="ID"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstName"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[FirstName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[MiddleInitial]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MiddleInitial"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[MiddleInitial]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="LastName"
+                      lineageId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output].Columns[LastName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[ID]"
+                      cachedDataType="i8"
+                      cachedName="ID"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstName"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[FirstName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[MiddleInitial]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MiddleInitial"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[MiddleInitial]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="LastName"
+                      lineageId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output].Columns[LastName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[ID]"
+                      cachedDataType="i8"
+                      cachedName="ID"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstName"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[FirstName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[MiddleInitial]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="MiddleInitial"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[MiddleInitial]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="LastName"
+                      lineageId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output].Columns[LastName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MiddleInitial]"
+                      name="MiddleInitial" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[LastName]"
+                      name="LastName" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[duplicate]"
+              endId="Package\Data Flow Task\OLE DB Destination dump.Inputs[OLE DB Destination Input]"
+              name="duplicate"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[duplicate]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Flat File Source CC.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Flat File Source MKT.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output2]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Flat File Source SLS.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Fuzzy Grouping Output]"
+              endId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+              name="Fuzzy Grouping Output"
+              startId="Package\Data Flow Task\Fuzzy Grouping.Outputs[Fuzzy Grouping Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task\Fuzzy Grouping.Inputs[Fuzzy Grouping Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[unique]"
+              endId="Package\Data Flow Task\OLE DB Destination unique.Inputs[OLE DB Destination Input]"
+              name="unique"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[unique]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="504,201" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Data Flow Task\Flat File Source CC"
+          TopLeft="192,80" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Data Flow Task\Flat File Source MKT"
+          TopLeft="445,77" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Data Flow Task\Flat File Source SLS"
+          TopLeft="698,77" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Data Flow Task\Union All"
+          TopLeft="542,283" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="279.5,122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="324,161"
+              Start="0,0"
+              End="324,153.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.5"
+                    Point2="0,80.5"
+                    Point3="4,80.5" />
+                  <mssgle:LineSegment
+                    End="320,80.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="320,80.5"
+                    Point2="324,80.5"
+                    Point3="324,84.5" />
+                  <mssgle:LineSegment
+                    End="324,153.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
+          TopLeft="536,119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.6666666666666,164"
+              Start="0,0"
+              End="86.6666666666666,156.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.1364365971107" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,93.1364365971107"
+                    Point2="0,97.1364365971107"
+                    Point3="4,97.1364365971107" />
+                  <mssgle:LineSegment
+                    End="82.6666666666666,97.1364365971107" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.6666666666666,97.1364365971107"
+                    Point2="86.6666666666666,97.1364365971107"
+                    Point3="86.6666666666666,101.136436597111" />
+                  <mssgle:LineSegment
+                    End="86.6666666666666,156.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output2]"
+          TopLeft="788,119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-155.75,164"
+              Start="0,0"
+              End="-155.75,156.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.013262599469" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,103.013262599469"
+                    Point2="0,107.013262599469"
+                    Point3="-4,107.013262599469" />
+                  <mssgle:LineSegment
+                    End="-151.75,107.013262599469" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-151.75,107.013262599469"
+                    Point2="-155.75,107.013262599469"
+                    Point3="-155.75,111.013262599469" />
+                  <mssgle:LineSegment
+                    End="-155.75,156.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Data Flow Task\Fuzzy Grouping"
+          TopLeft="517,389" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="603.5,325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8,64"
+              Start="0,0"
+              End="-8,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="-4,32" />
+                  <mssgle:LineSegment
+                    End="-4,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4,32"
+                    Point2="-8,32"
+                    Point3="-8,36" />
+                  <mssgle:LineSegment
+                    End="-8,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task\Conditional Split"
+          TopLeft="528,475" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Fuzzy Grouping Output]"
+          TopLeft="595.5,431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12,44"
+              Start="0,0"
+              End="12,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="8,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8,22"
+                    Point2="12,22"
+                    Point3="12,26" />
+                  <mssgle:LineSegment
+                    End="12,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Data Flow Task\OLE DB Destination unique"
+          TopLeft="457,592" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[unique]"
+          TopLeft="607.5,517">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-44,75"
+              Start="0,0"
+              End="-44,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="-4,37.5" />
+                  <mssgle:LineSegment
+                    End="-40,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-40,37.5"
+                    Point2="-44,37.5"
+                    Point3="-44,41.5" />
+                  <mssgle:LineSegment
+                    End="-44,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-37.4675,42.5,30.935,11.3310546875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Data Flow Task\OLE DB Destination dump"
+          TopLeft="710,599" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[duplicate]"
+          TopLeft="632.666666666667,517">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="181.333333333333,82"
+              Start="0,0"
+              End="181.333333333333,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.2901618929016" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.2901618929016"
+                    Point2="0,33.2901618929016"
+                    Point3="4,33.2901618929016" />
+                  <mssgle:LineSegment
+                    End="177.333333333333,33.2901618929016" />
+                  <mssgle:CubicBezierSegment
+                    Point1="177.333333333333,33.2901618929016"
+                    Point2="181.333333333333,33.2901618929016"
+                    Point3="181.333333333333,37.2901618929016" />
+                  <mssgle:LineSegment
+                    End="181.333333333333,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="70.1007096354167,38.2901618929016,41.1319140625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination unique">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination dump">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
